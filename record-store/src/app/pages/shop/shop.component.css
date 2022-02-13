@@ -1,0 +1,30 @@
+.discoBox {
+    padding: 10px 10px;
+}
+
+.discoBox img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.discoBox h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.discoBox h2 {
+    font-size: 16px;
+}
+
+.buybtn {
+    color: #000;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

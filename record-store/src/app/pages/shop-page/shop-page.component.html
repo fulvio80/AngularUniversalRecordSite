@@ -1,0 +1,21 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-6" *ngIf="shopData">
+            <a routerLink="../../shop" class="btn btn-sm btn-dark mb-3 mx-2">Back</a>
+            <img src="{{shopData[0].discoImg}}">
+            <h1 class="mt-3">{{shopData[0].discoName}}</h1>
+            <h2>{{shopData[0].discoAuthor}}</h2>
+            <p>{{shopData[0].discoDetails}}</p>
+            <p>{{shopData[0].discoPrice | currency : 'EUR' }}</p>
+        </div>
+        <div class="col-lg-6 col-lg-12">
+            <h1>Enter Your Details</h1>
+            <form>
+                <input type="text" class="form-control" placeholder="Enter Your Full Name">
+                <input type="text" class="form-control mt-1" placeholder="Enter Your Full Mobile">
+                <textarea class="form-control mt-1" placeholder="Enter Your Address" ></textarea>
+                <button class="btn btn-md btn-dark mt-3">Place Order</button>            
+            </form>
+        </div>
+    </div>
+</div>

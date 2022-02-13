@@ -1,0 +1,51 @@
+<!-- banner -->
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Tutti i suoni e le emozioni <br> del vinile</h1>
+        <a routerLink="shop">ORDER NOW <i class="bi bi-arrow-right"></i> </a>
+    </div>
+</div>
+<!-- step -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">Scegli tra i nostri servizi più apprezzati</h1>
+    <div class="row mt-5">
+        <!-- box one -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>Ricerche</h1>
+                <p>Un nostro consulente ti guida nelle ricerche del vinile più desiderato</p>
+            </div>
+        </div>
+        <!-- box two -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>Ascolto</h1>
+                <p>Prenota una camera dove poter ascoltare tutti i dischi senza alcun disturbo</p>
+            </div>
+        </div>
+        <!-- box three -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>Collezioni</h1>
+                <p>Valutiamo le tue collezioni e certifichiamo la qualità di ogni disco</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- discoBox -->
+
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">I dischi della settimana</h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let disco of discoData; index as i">
+            <div class="discoBox" *ngIf="i <= 3">
+                <img src="{{disco.discoImg}}">
+                <h1>{{disco.discoName}}</h1>
+                <h2>{{disco.discoAuthor}}</h2>
+                <p>{{disco.discoPrice | currency:'EUR'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="shop" class="viewmorebtn">View more <i class="bi bi-arrow-right"></i> </a>
+</div>
